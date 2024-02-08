@@ -1,0 +1,28 @@
+{
+  "name": "sori",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Sori, inspired from the Korean word '소리' meaning 'sound,' is a multipurpose Discord bot.",
+  "module": "src/index.ts",
+  "scripts": {
+    "start": "bun --env-file=.env.production run .",
+    "dev": "bun --watch --env-file=.env.development run .",
+    "check": "bunx biome check .",
+    "format": "bunx biome format --write .",
+    "lint": "bunx biome lint --apply ."
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "drizzle-orm": "^0.29.3",
+    "uwuifier": "^4.0.5"
+  }
+}
