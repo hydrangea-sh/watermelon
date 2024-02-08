@@ -20,7 +20,7 @@ jobs:
       - name: Setup Biome
         uses: biomejs/setup-biome@v2
         with:
-          version: 'latest'
+          version: "latest"
 
       - name: Analyze Code Quality
         run: biome ci .
