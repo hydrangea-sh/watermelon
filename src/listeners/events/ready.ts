@@ -11,6 +11,11 @@ export const action: Action<Client<true>> = async (client) => {
 		})
 		.then(() => {
 			log.success(`Logged in as "${client.user.tag}"`);
+			log.success(
+				`Ready! Invite the bot with https://discordapp.com/oauth2/authorize?client_id=${
+					client.user.id ?? ""
+				}&scope=bot%20applications.commands&permissions=3173376`,
+			);
 		})
 		.catch((error) => {
 			log.error("There was an error uploading commands to Discord API");
