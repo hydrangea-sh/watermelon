@@ -1,6 +1,5 @@
-name: Code quality
+name: Code Quality Checks
 
-# Define the event triggers
 on:
   push:
     branches:
@@ -10,15 +9,18 @@ on:
       - main
 
 jobs:
-  quality:
+  code-quality:
+    name: Code Quality Analysis
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Setup Biome
+
+      - name: Setup Environment
         uses: biomejs/setup-biome@v2
         with:
-          version: latest
-      - name: Run Biome
-        run: biome ci .
+          version: 'latest'
 
+      - name: Analyze Code Quality
+        run: biome ci .
