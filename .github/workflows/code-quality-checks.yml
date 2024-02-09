@@ -1,4 +1,4 @@
-name: Code Quality Checks
+name: Perform Code Quality Checks
 
 on:
   push:
@@ -9,18 +9,18 @@ on:
       - main
 
 jobs:
-  code-quality:
-    name: Code Quality Analysis
+  code_quality_analysis:
+    name: Analyze Code for Quality Issues
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository Source Code
         uses: actions/checkout@v4
 
-      - name: Setup Biome
+      - name: Install Biome CLI
         uses: biomejs/setup-biome@v2
         with:
           version: "latest"
 
-      - name: Analyze Code Quality
+      - name: Execute Code Quality Analysis
         run: biome ci .
