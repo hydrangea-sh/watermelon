@@ -1,4 +1,4 @@
-name: Deploy main to Fly
+name: Deploy to Fly
 on:
   push:
     branches: [ main ]
@@ -8,10 +8,10 @@ env:
 
 jobs:
   deploy:
-    name: Deploy to Fly
+    name: Fly.io Deployment
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
         
       - name: Setup flyctl
