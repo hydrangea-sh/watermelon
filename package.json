@@ -2,7 +2,7 @@
   "name": "sori",
   "version": "0.0.1",
   "type": "module",
-  "description": "Sori, inspired from the Korean word '소리' meaning 'sound,' is a multipurpose Discord bot.",
+  "description": "Sori, inspired from the Korean word '소리' meaning 'sound', is a multipurpose Discord bot.",
   "module": "src/index.ts",
   "scripts": {
     "start": "bun --env-file=.env.production run .",
