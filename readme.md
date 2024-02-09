@@ -67,7 +67,7 @@ Follow these instructions to set up Sori in your environment:
   bun run dev
   ```
 
-- **Test your code changes:** (This isn't yet implemented)
+- **Test your code changes:**
 
   ```bash
   bun run test
