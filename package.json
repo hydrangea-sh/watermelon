@@ -7,9 +7,9 @@
   "scripts": {
     "start": "bun --env-file=.env.production run .",
     "dev": "bun --watch --env-file=.env.development run .",
-    "check": "bunx biome check .",
-    "format": "bunx biome format --write .",
-    "lint": "bunx biome lint --apply ."
+    "format": "bunx @biomejs/biome format --write .",
+    "lint": "bunx @biomejs/biome lint --apply .",
+    "check": "bunx @biomejs/biome check --apply ."
   },
   "license": "GPL-3.0",
   "devDependencies": {
