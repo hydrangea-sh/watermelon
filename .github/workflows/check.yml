@@ -10,7 +10,7 @@ on:
 
 jobs:
   code_quality_analysis:
-    name: Analyze Code for Quality Issues
+    name: Perform Code Quality Checks
     runs-on: ubuntu-latest
 
     steps:
