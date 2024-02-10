@@ -22,5 +22,5 @@ jobs:
         with:
           version: "latest"
 
-      - name: Execute Code Quality Analysis
+      - name: Execute Code Quality Checks
         run: biome ci .
