@@ -39,13 +39,13 @@ export async function setListeners(client: Client) {
 		const isContextCommand = on instanceof ContextMenuCommandBuilder;
 
 		if (typeof on !== "string" && !isSlashCommand && !isContextCommand) {
-			throw new TypeError(
+			throw new Error(
 				`Command at "${file}" is missing or is not exporting the "on" listener data`,
 			);
 		}
 
 		if (typeof action !== "function") {
-			throw new TypeError(
+			throw new Error(
 				`Command at "${file}" is missing or is not exporting the "action" function`,
 			);
 		}
