@@ -16,6 +16,5 @@ try {
 	await setListeners(client);
 	await client.login(Bun.env.DISCORD_TOKEN);
 } catch (error) {
-	log.error("Error loading commands and/or starting client");
-	log.error(error);
+	log.error("Error loading commands and/or starting client", error);
 }

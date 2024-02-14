@@ -18,8 +18,7 @@ export const action: Action<Message> = async (message) => {
 
 			await message.delete();
 		} catch (error) {
-			log.error("Error handling message for URL replacement and deletion:");
-			log.error(error);
+			log.error("Error handling message for URL replacement and deletion:", error);
 
 			const embed = new EmbedBuilder()
 				.setTitle("Error processing your message")

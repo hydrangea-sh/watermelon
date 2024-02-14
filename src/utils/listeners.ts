@@ -59,8 +59,7 @@ export async function setListeners(client: Client) {
 
 		client.on(on, (x) => {
 			action(x).catch((error) => {
-				log.error(`Uncaught error at event on file "${file}"`);
-				log.error(error);
+				log.error(`Uncaught error at event on file "${file}"`, error);
 			});
 		});
 	}

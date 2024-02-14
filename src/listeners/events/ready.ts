@@ -18,7 +18,6 @@ export const action: Action<Client<true>> = async (client) => {
 			);
 		})
 		.catch((error) => {
-			log.error("There was an error uploading commands to Discord API");
-			log.error(error);
+			log.error("There was an error uploading commands to Discord API", error);
 		});
 };

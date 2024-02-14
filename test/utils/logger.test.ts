@@ -11,8 +11,9 @@ globalThis.console = {
 
 test("log.error logs an error message", () => {
 	const testMessage = "Test error message";
-	log.error(testMessage);
-	expect(console.error).toHaveBeenCalledWith(`⛔️ ${testMessage}`);
+	const testError = new Error("Test error detail");
+	log.error(testMessage, testError);
+	expect(console.error).toHaveBeenCalledWith(`⛔️ ${testMessage}`, testError.message);
 });
 
 test("log.success logs a success message", () => {
@@ -24,11 +25,13 @@ test("log.success logs a success message", () => {
 test("log.info logs an info message", () => {
 	const testMessage = "Test info message";
 	log.info(testMessage);
-	expect(console.info).toHaveBeenCalledWith(`️📝 ${testMessage}`);
+	expect(console.info).toHaveBeenCalledWith(`📝 ${testMessage}`);
 });
 
-test("log.warn logs a warning message", () => {
-	const testMessage = "Test warning message";
-	log.warn(testMessage);
-	expect(console.warn).toHaveBeenCalledWith(`⚠️ ${testMessage}`);
+test("log.warn logs an error message", () => {
+	const testMessage = "Test error message";
+	const testError = new Error("Test error detail");
+	log.warn(testMessage, testError);
+	expect(console.warn).toHaveBeenCalledWith(`🚸 ${testMessage}`, testError.message);
 });
+

@@ -9,15 +9,14 @@ export const action: Action<Interaction> = async (interaction) => {
 
 	const command = commands.get(interaction.commandName);
 	if (!command?.length) {
-		log.error(`Command with name "${interaction.commandName}" was not found!`);
+		log.warn(`Command with name "${interaction.commandName}" was not found!`);
 		return;
 	}
 
 	const [data, action] = command;
 
 	await action(interaction).catch((error) => {
-		log.error(`Uncaught error at command "${data.name}"`);
-		log.error(error);
+		log.error(`Uncaught error at command "${data.name}"`, error);
 
 		const embed = new EmbedBuilder()
 			.setTitle("There was an error with this command")

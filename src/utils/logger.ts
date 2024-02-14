@@ -1,6 +1,7 @@
 export const log = {
-	error(message: string, error?: Error) {
-		console.error(`⛔️ ${message}`, error ? error.message : "");
+	error(message: string, error?: unknown) {
+		const errorMessage = error instanceof Error ? error.message : "Non-Error object thrown";	
+		console.error(`⛔️ ${message}`, errorMessage);
 	},
 	success(message: string) {
 		console.log(`✅ ${message}`);
@@ -8,7 +9,8 @@ export const log = {
 	info(message: string) {
 		console.info(`📝 ${message}`);
 	},
-	warn(message: string, warning?: Error) {
-		console.warn(`🚸 ${message}`, warning ? warning.message : "");
+	warn(message: string, error?: unknown) {
+		const errorMessage = error instanceof Error ? error.message : "Non-Error object thrown";	
+		console.warn(`🚸 ${message}`, errorMessage);
 	},
 };

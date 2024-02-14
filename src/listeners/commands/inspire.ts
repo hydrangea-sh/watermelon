@@ -15,8 +15,8 @@ export const action: Action<SlashCommand> = async (interaction) => {
 		const res = await fetch("https://api.quotable.io/random");
 		const { content, author } = await res.json<Quote>();
 		await interaction.reply(`"${content}"  - ${author}`);
-	} catch {
+	} catch(error) {
 		await interaction.reply(":x: There was an error fetching quote");
-		log.error("There was an error fetching quote");
+		log.warn("There was an issue fetching quote", error);
 	}
 };
