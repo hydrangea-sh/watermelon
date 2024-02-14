@@ -13,7 +13,10 @@ test("log.error logs an error message", () => {
 	const testMessage = "Test error message";
 	const testError = new Error("Test error detail");
 	log.error(testMessage, testError);
-	expect(console.error).toHaveBeenCalledWith(`⛔️ ${testMessage}`, testError.message);
+	expect(console.error).toHaveBeenCalledWith(
+		`⛔️ ${testMessage}`,
+		testError.message,
+	);
 });
 
 test("log.success logs a success message", () => {
@@ -32,6 +35,8 @@ test("log.warn logs an error message", () => {
 	const testMessage = "Test error message";
 	const testError = new Error("Test error detail");
 	log.warn(testMessage, testError);
-	expect(console.warn).toHaveBeenCalledWith(`🚸 ${testMessage}`, testError.message);
+	expect(console.warn).toHaveBeenCalledWith(
+		`🚸 ${testMessage}`,
+		testError.message,
+	);
 });
-
