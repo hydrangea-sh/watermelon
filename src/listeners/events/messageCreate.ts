@@ -20,7 +20,7 @@ export const action: Action<Message> = async (message) => {
 			}
 		} catch (error) {
 			// Check if error is due to concurrent message deletion
-			if (error !== 10008) {
+			if (error !== "Unknown Message") {
 				log.error(
 					"Error handling message for URL replacement and deletion:",
 					error,
