@@ -7,7 +7,7 @@
   "scripts": {
     "start": "bun --bun --env-file=.env.production run .",
     "dev": "bun --bun --watch --env-file=.env.development run .",
-    "test": "bun test .",
+    "test": "bun --coverage test .",
     "format": "bunx @biomejs/biome format --write .",
     "lint": "bunx @biomejs/biome lint --apply .",
     "check": "bunx @biomejs/biome check --apply ."
