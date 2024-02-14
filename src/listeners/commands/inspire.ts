@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
+import { log } from "../../utils/logger";
 
 interface Quote {
 	content: string;
@@ -16,5 +17,6 @@ export const action: Action<SlashCommand> = async (interaction) => {
 		await interaction.reply(`"${content}"  - ${author}`);
 	} catch {
 		await interaction.reply(":x: There was an error fetching quote");
+		log.error("There was an error fetching quote");
 	}
 };

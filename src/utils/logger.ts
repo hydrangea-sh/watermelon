@@ -1,14 +1,14 @@
 export const log = {
-	error(message: unknown) {
-		console.error(`⛔️ ${message}`);
+	error(message: string, error?: Error) {
+		console.error(`⛔️ ${message}`, error ? error.message : "");
 	},
-	success(message: unknown) {
+	success(message: string) {
 		console.log(`✅ ${message}`);
 	},
-	info(message: unknown) {
-		console.info(`️📝 ${message}`);
+	info(message: string) {
+		console.info(`📝 ${message}`);
 	},
-	warn(message: unknown) {
-		console.warn(`⚠️ ${message}`);
+	warn(message: string, warning?: Error) {
+		console.warn(`🚸 ${message}`, warning ? warning.message : "");
 	},
 };
