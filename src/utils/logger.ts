@@ -1,4 +1,11 @@
-export const log = {
+export interface Log {
+	error(message: string, error?: unknown): void;
+	success(message: string): void;
+	info(message: string): void;
+	warn(message: string, error?: unknown): void;
+}
+
+export const log: Log = {
 	error(message: string, error?: unknown) {
 		const errorMessage =
 			error instanceof Error ? error.message : "Non-Error object thrown";
