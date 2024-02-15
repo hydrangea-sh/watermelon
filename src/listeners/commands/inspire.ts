@@ -17,6 +17,9 @@ export const action: Action<SlashCommand> = async (interaction) => {
 		await interaction.reply(`"${content}"  - ${author}`);
 	} catch (error) {
 		await interaction.reply(":x: There was an error fetching quote");
-		log.error("There was an issue fetching quote, json-ing object, or replying to message", error);
+		log.error(
+			"There was an issue fetching quote, json-ing object, or replying to message",
+			error,
+		);
 	}
 };
