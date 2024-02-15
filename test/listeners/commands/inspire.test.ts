@@ -1,11 +1,4 @@
-import {
-	afterEach,
-	beforeEach,
-	describe,
-	expect,
-	test,
-	mock,
-} from "bun:test";
+import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
 
 describe("Your Test Suite Name", () => {
 	let bun: string;

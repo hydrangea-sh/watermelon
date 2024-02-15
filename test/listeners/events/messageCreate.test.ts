@@ -1,12 +1,4 @@
-import {
-	afterEach,
-	beforeEach,
-	describe,
-	expect,
-	it,
-	mock,
-	test,
-} from "bun:test";
+import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
 
 describe("Your Test Suite Name", () => {
 	let bun: string;
@@ -15,7 +7,7 @@ describe("Your Test Suite Name", () => {
 
 	afterEach(() => {});
 
-	it("should do something meaningful", () => {});
+	test("should do something meaningful", () => {});
 
-	it("should do something else meaningful", () => {});
+	test("should do something else meaningful", () => {});
 });
