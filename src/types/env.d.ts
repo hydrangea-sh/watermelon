@@ -24,4 +24,3 @@ declare global {
 	type UserCommand = UserContextMenuCommandInteraction;
 	type MessageCommand = MessageContextMenuCommandInteraction;
 }
-
