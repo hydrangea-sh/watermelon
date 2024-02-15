@@ -7,9 +7,7 @@ export interface Log {
 
 export const log: Log = {
 	error(message: string, error?: unknown) {
-		const errorMessage =
-			error instanceof Error ? error.message : "Non-Error object thrown";
-		console.error(`⛔️ ${message}`, errorMessage);
+		console.error(`⛔️ ${message}`, error);
 	},
 	success(message: string) {
 		console.log(`✅ ${message}`);
@@ -18,8 +16,6 @@ export const log: Log = {
 		console.info(`📝 ${message}`);
 	},
 	warn(message: string, error?: unknown) {
-		const errorMessage =
-			error instanceof Error ? error.message : "Non-Error object thrown";
-		console.warn(`🚸 ${message}`, errorMessage);
+		console.warn(`🚸 ${message}`, error);
 	},
 };
