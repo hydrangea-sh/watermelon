@@ -30,7 +30,7 @@ function getFiles(dir: string): string[] {
 
 export async function setListeners(client: Client) {
 	const files = getFiles(join(process.cwd(), "src/listeners"));
-	
+
 	for (const file of files) {
 		const { on, action }: ClientEvent = await import(file);
 
