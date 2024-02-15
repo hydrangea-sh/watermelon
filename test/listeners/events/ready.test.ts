@@ -3,9 +3,8 @@ import {
 	beforeEach,
 	describe,
 	expect,
-	it,
-	mock,
 	test,
+	mock
 } from "bun:test";
 
 describe("Your Test Suite Name", () => {
@@ -15,7 +14,7 @@ describe("Your Test Suite Name", () => {
 
 	afterEach(() => {});
 
-	it("should do something meaningful", () => {});
+	test("should do something meaningful", () => {});
 
-	it("should do something else meaningful", () => {});
+	test("should do something else meaningful", () => {});
 });

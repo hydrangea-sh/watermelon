@@ -1,10 +1,10 @@
-import { describe, expect, it } from "bun:test";
+import { describe, expect, test } from "bun:test";
 import { platforms } from "../../src/embed/platforms";
 import { replacer } from "../../src/embed/replacer";
 
 describe("replacer", () => {
 	for (const platform of platforms) {
-		it(`replaces ${platform.name} URLs correctly`, () => {
+		test(`replaces ${platform.name} URLs correctly`, () => {
 			const testUrl = `https://www.${platform.name
 				.toLowerCase()
 				.replace(" ", "")}.com/path/to/content`;
@@ -16,7 +16,7 @@ describe("replacer", () => {
 		});
 	}
 
-	it("replaces multiple URLs from different platforms correctly", () => {
+	test("replaces multiple URLs from different platforms correctly", () => {
 		const input = platforms
 			.reduce((acc, platform, index) => {
 				const testUrl = `https://www.${platform.name
