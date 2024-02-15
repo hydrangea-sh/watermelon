@@ -13,6 +13,7 @@ async function startDiscordBot() {
 	});
 
 	try {
+		log.info("Discord bot is starting.");
 		await setListeners(client);
 		await client.login(Bun.env.DISCORD_TOKEN);
 		log.success("Discord bot is successfully logged in and initialized.");
@@ -23,9 +24,10 @@ async function startDiscordBot() {
 }
 
 function startElysiaServer() {
+	log.info("Elysia server is starting.");
 	const app = new Elysia();
 	app.listen(Bun.env.PORT || 3000, () => {
-		log.info(`Elysia server started on port ${Bun.env.PORT}.`);
+		log.success(`Elysia server successfully started on port ${Bun.env.PORT}.`);
 	});
 }
 
