@@ -24,17 +24,5 @@ export const action: Action<SlashCommand> = async (interaction) => {
 		exclamations: 1,
 	});
 
-	if (!interaction.inGuild()) {
-		await interaction.reply(":x: This command can only be run in a server!");
-		return;
-	}
-
-	if (!interaction.channel) {
-		await interaction.reply(
-			":x: This command can only be run in a text channel!",
-		);
-		return;
-	}
-
 	await interaction.reply(`${uwuifier.uwuifySentence(message)}`);
 };
