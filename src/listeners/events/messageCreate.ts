@@ -15,8 +15,9 @@ export const action: Action<Message> = async (message) => {
 		await message.channel.send(newMessageContent);
 
 		await message.delete().catch((error) => {
+			//the message was not found
 			if (error.code === 10008) {
-				log.error("Failed to delete the message:", error);
+				log.warn("Failed to delete the message:", error);
 			}
 		});
 	}
