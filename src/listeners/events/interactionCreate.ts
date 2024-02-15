@@ -1,4 +1,4 @@
-import { Colors, EmbedBuilder, Events, type Interaction } from "discord.js";
+import { Events, type Interaction } from "discord.js";
 import { commands } from "../../utils/listeners";
 import { log } from "../../utils/logger";
 

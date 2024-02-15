@@ -1,10 +1,4 @@
-import {
-	Colors,
-	DiscordAPIError,
-	EmbedBuilder,
-	Events,
-	Message,
-} from "discord.js";
+import { Events, Message } from "discord.js";
 import { replacer } from "../../embed/replacer";
 import { log } from "../../utils/logger";
 
