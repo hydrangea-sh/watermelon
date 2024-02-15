@@ -30,7 +30,7 @@ test("log.error logs an error message", () => {
 	log.error(testMessage, testError);
 	expect(console.error).toHaveBeenCalledWith(
 		`⛔️ ${testMessage}`,
-		testError.message,
+		testError,
 	);
 });
 
@@ -52,6 +52,6 @@ test("log.warn logs a warn message", () => {
 	log.warn(testMessage, testError);
 	expect(console.warn).toHaveBeenCalledWith(
 		`🚸 ${testMessage}`,
-		testError.message,
+		testError,
 	);
 });
