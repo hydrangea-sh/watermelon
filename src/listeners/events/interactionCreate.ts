@@ -17,21 +17,5 @@ export const action: Action<Interaction> = async (interaction) => {
 
 	await action(interaction).catch((error) => {
 		log.error(`Uncaught error at command "${data.name}"`, error);
-
-		const embed = new EmbedBuilder()
-			.setTitle("There was an error with this command")
-			.setDescription(
-				`The command ${data.name} failed by unknown reasons, try again later, or report this bug.`,
-			)
-			.setColor(Colors.Red)
-			.setTimestamp(new Date());
-
-		interaction
-			.reply({
-				embeds: [embed],
-			})
-			.catch(() => {
-				interaction.editReply({ embeds: [embed] }).catch(() => {});
-			});
 	});
 };
