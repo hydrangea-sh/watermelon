@@ -15,15 +15,13 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
-    "bun-types": "latest",
-    "drizzle-kit": "^0.20.14"
+    "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "discord.js": "^14.14.1",
-    "drizzle-orm": "^0.29.3",
     "uwuifier": "^4.0.5"
   }
 }
