@@ -7,7 +7,11 @@ describe("Your Test Suite Name", () => {
 
 	afterEach(() => {});
 
-	test("should do something meaningful", () => {});
+	mock(() => {});
 
-	test("should do something else meaningful", () => {});
+	expect(() => {});
+
+	test.todo("should do something meaningful", () => {});
+
+	test.todo("should do something else meaningful", () => {});
 });
