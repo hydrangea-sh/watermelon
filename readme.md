@@ -46,11 +46,16 @@ Follow these instructions to set up Sori in your environment:
 
 4. **Create `.env.development` and `.env.production` files:**
 
-   Make sure to replace `DEVELOPMENT-TOKEN-HERE` and `PRODUCTION-TOKEN-HERE` with your actual Discord bot tokens. For guidance on tokens, refer to the [.env.schema](https://github.com/hydrangea-sh/sori/blob/main/.env.schema).
+   Make sure to replace `DEVELOPMENT-TOKEN-HERE` and `PRODUCTION-TOKEN-HERE` with your actual Discord bot tokens. These files should be in the root of the directory. Refer to [.env.schema](https://github.com/hydrangea-sh/sori/blob/main/.env.schema).
+
+   Here's a quick script you can use to create the files.
 
    ```bash
-   echo 'DISCORD_TOKEN="DEVELOPMENT-TOKEN-HERE"' > .env.development
    echo 'DISCORD_TOKEN="PRODUCTION-TOKEN-HERE"' > .env.production
+   echo 'PORT="3000"' >> .env.production
+
+   echo 'DISCORD_TOKEN="DEVELOPMENT-TOKEN-HERE"' > .env.development
+   echo 'PORT="3000"' >> .env.development
    ```
 
 ## Usage
