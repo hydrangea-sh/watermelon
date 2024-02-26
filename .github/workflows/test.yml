@@ -1,14 +1,15 @@
 name: Perform Tests
 
 on:
-  workflow_run:
-    workflows: ["Perform Code Quality Checks"]
-    branches: [main]
-    types: [completed]
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   perform-tests:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Perform Tests
     runs-on: ubuntu-latest
     steps:

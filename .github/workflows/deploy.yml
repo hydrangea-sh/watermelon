@@ -1,17 +1,15 @@
 name: Deploy Application to Fly.io
 
 on:
-  workflow_run:
-    workflows: ["Perform Tests"]
-    branches: [main]
-    types: [completed]
+  push:
+    branches:
+      - main
 
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Deploy Application to Fly.io
     runs-on: ubuntu-latest
     steps:
