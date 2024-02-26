@@ -3,3 +3,4 @@
 .DS_Store
 .env.production
 .env.development
+*.db
