@@ -7,7 +7,7 @@
   "scripts": {
     "start": "bun --bun --env-file=.env.production run .",
     "dev": "bun --bun --watch --env-file=.env.development run .",
-    "test": "bun --coverage test .",
+    "test": "bun --coverage --watch test .",
     "format": "bunx @biomejs/biome format --write .",
     "lint": "bunx @biomejs/biome lint --apply .",
     "check": "bunx @biomejs/biome check --apply ."
@@ -21,8 +21,12 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.16.1",
     "discord.js": "^14.14.1",
     "elysia": "^0.8.17",
+    "ffmpeg-static": "^5.2.0",
+    "sodium": "^3.0.2",
     "uwuifier": "^4.0.5"
   }
 }

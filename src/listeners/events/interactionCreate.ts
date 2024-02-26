@@ -13,6 +13,11 @@ export const action: Action<Interaction> = async (interaction) => {
 		return;
 	}
 
+	if (interaction.commandName === "play") {
+		if (!interaction.isChatInputCommand()) return;
+		//implement music logic
+	}
+
 	const [data, action] = command;
 
 	await action(interaction).catch((error) => {
