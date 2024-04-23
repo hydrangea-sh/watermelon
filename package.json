@@ -1,32 +1,32 @@
 {
-  "name": "sori",
-  "version": "0.0.1",
-  "type": "module",
-  "description": "Sori, inspired from the Korean word '소리' meaning 'sound', is a multipurpose Discord bot.",
-  "module": "src/index.ts",
-  "scripts": {
-    "start": "bun --bun --env-file=.env.production run .",
-    "dev": "bun --bun --watch --env-file=.env.development run .",
-    "test": "bun --coverage test .",
-    "test:watch": "bun --coverage --watch test .",
-    "format": "bunx @biomejs/biome format --write .",
-    "lint": "bunx @biomejs/biome lint --apply .",
-    "check": "bunx @biomejs/biome check --apply ."
-  },
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "@biomejs/biome": "^1.7.1",
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "@discordjs/opus": "^0.9.0",
-    "@discordjs/voice": "^0.16.1",
-    "discord.js": "^14.14.1",
-    "elysia": "^1.0.14",
-    "sodium": "^3.0.2",
-    "uwuifier": "^4.0.5"
-  }
+	"name": "sori",
+	"version": "0.0.1",
+	"type": "module",
+	"description": "Sori, inspired from the Korean word '소리' meaning 'sound', is a multipurpose Discord bot.",
+	"module": "src/index.ts",
+	"scripts": {
+		"start": "bun --bun --env-file=.env.production run .",
+		"dev": "bun --bun --watch --env-file=.env.development run .",
+		"test": "bun --coverage test .",
+		"test:watch": "bun --coverage --watch test .",
+		"format": "bunx @biomejs/biome format --write .",
+		"lint": "bunx @biomejs/biome lint --apply .",
+		"check": "bunx @biomejs/biome check --apply ."
+	},
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.1",
+		"bun-types": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"@discordjs/opus": "^0.9.0",
+		"@discordjs/voice": "^0.16.1",
+		"discord.js": "^14.14.1",
+		"elysia": "^1.0.14",
+		"sodium": "^3.0.2",
+		"uwuifier": "^4.0.5"
+	}
 }
