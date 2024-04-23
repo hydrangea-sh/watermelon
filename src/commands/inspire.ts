@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { log } from "../../utils/logger";
+import { log } from "../utils/logger";
 
 interface Quote {
 	content: string;

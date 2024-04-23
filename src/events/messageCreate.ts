@@ -1,7 +1,7 @@
 import { Events, type Message } from "discord.js";
-import { containsValidUrl } from "../../embed/containsValidUrl";
-import { replacer } from "../../embed/replacer";
-import { log } from "../../utils/logger";
+import { containsValidUrl } from "../services/embedService";
+import { replacer } from "../services/embedService";
+import { log } from "../utils/logger";
 
 export const on = Events.MessageCreate;
 

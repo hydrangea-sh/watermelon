@@ -4,7 +4,7 @@ interface Platform {
 	replacement: (url: string) => string;
 }
 
-export const platforms: Platform[] = [
+const platforms: Platform[] = [
 	{
 		name: "Instagram",
 		pattern: /(https?:\/\/([a-zA-Z0-9-]+\.)?instagram\.[^?]+)/g,
@@ -38,3 +38,35 @@ export const platforms: Platform[] = [
 
 	// Add other platforms here following the same structure
 ];
+
+export const replacer = (content: string): string => {
+	let updatedContent = content;
+	for (const platform of platforms) {
+		const matches = updatedContent.match(platform.pattern);
+		if (matches) {
+			for (const url of matches) {
+				updatedContent = updatedContent.replace(url, platform.replacement(url));
+			}
+		}
+	}
+	return updatedContent;
+};
+
+export const containsValidUrl = (text: string): boolean => {
+	const urlPattern = /https?:\/\/[^\s]+/g;
+	const potentialUrls = text.match(urlPattern);
+
+	if (!potentialUrls) {
+		return false;
+	}
+
+	for (const url of potentialUrls) {
+		try {
+			new URL(url);
+			return true;
+		} catch (error) {}
+	}
+
+	return false;
+};
+

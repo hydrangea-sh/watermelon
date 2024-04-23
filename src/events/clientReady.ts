@@ -1,6 +1,6 @@
 import { type Client, Events, Routes } from "discord.js";
-import { commands } from "../../utils/listeners";
-import { log } from "../../utils/logger";
+import { commands } from "../utils/listeners";
+import { log } from "../utils/logger";
 
 export const on = Events.ClientReady;
 

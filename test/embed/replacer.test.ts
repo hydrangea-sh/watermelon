@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { platforms } from "../../src/embed/platforms";
-import { replacer } from "../../src/embed/replacer";
+import { platforms } from "../../src/services/platforms";
+import { replacer } from "../../src/services/embedService";
 
 describe("replacer", () => {
 	for (const platform of platforms) {
