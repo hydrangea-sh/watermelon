@@ -4,7 +4,7 @@ interface Platform {
 	replacement: (url: string) => string;
 }
 
-const platforms: Platform[] = [
+export const platforms: Platform[] = [
 	{
 		name: "Instagram",
 		pattern: /(https?:\/\/([a-zA-Z0-9-]+\.)?instagram\.[^?]+)/g,
@@ -69,4 +69,3 @@ export const containsValidUrl = (text: string): boolean => {
 
 	return false;
 };
-
