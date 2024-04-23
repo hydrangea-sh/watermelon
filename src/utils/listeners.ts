@@ -1,7 +1,7 @@
-import { readdirSync } from "fs";
-import { join } from "path";
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import {
-	Client,
+	type Client,
 	Collection,
 	ContextMenuCommandBuilder,
 	SlashCommandBuilder,

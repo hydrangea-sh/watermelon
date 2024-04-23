@@ -1,4 +1,4 @@
-import { Events, Message } from "discord.js";
+import { Events, type Message } from "discord.js";
 import { containsValidUrl } from "../../embed/containsValidUrl";
 import { replacer } from "../../embed/replacer";
 import { log } from "../../utils/logger";

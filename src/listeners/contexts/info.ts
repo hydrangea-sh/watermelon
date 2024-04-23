@@ -5,7 +5,7 @@ import {
 	ButtonStyle,
 	ContextMenuCommandBuilder,
 	EmbedBuilder,
-	GuildMember,
+	type GuildMember,
 	PermissionFlagsBits,
 } from "discord.js";
 
