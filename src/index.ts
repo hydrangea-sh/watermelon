@@ -23,7 +23,7 @@ async function startDiscordBot() {
 	}
 }
 
-function startElysiaServer() {
+async function startElysiaServer() {
 	log.info("Elysia server is starting.");
 	const app = new Elysia();
 	app.listen(Bun.env.PORT || 3000, () => {
