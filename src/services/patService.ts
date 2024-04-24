@@ -1,9 +1,10 @@
 import fs from "node:fs";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { GifEncoder } from "@skyra/gifenc";
+import type { User } from "discord.js";
 import { GifCodec, type GifFrame } from "gifwrap";
 
-export async function createPatGif() {
+export async function createPatGif(user: User): Promise<Buffer> {
 	const frames = await breakGifIntoFrames("./src/assets/pat.gif");
 	console.log(`The GIF has ${frames.length} frames.`);
 
@@ -16,9 +17,7 @@ export async function createPatGif() {
 	encoder.setRepeat(0).setDelay(50).setQuality(10).setTransparent(0).start();
 
 	// Load the background image
-	const backgroundImage = await loadImage(
-		"https://cdn.discordapp.com/avatars/70905440065560576/a_3749cc3eb1680b8a3d15f6210160f6ca.gif",
-	);
+	const backgroundImage = await loadImage(user.displayAvatarURL());
 
 	for (const frame of frames) {
 		// Create a new canvas for each frame
@@ -67,9 +66,13 @@ export async function createPatGif() {
 
 	encoder.finish();
 
-	// Write the GIF to a file or do further processing with the stream
-	const output = fs.createWriteStream("output.gif");
-	stream.pipe(output);
+	// Collect the GIF data chunks from the readable stream
+	const chunks: Buffer[] = [];
+	for await (const chunk of stream) {
+		chunks.push(chunk);
+	}
+
+	return Buffer.concat(chunks);
 }
 
 async function breakGifIntoFrames(gifPath: string) {

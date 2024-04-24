@@ -1,6 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
 import { createPatGif } from "../services/patService";
-import { log } from "../utils/logger";
 
 export const on = new SlashCommandBuilder()
 	.setName("pat")
@@ -13,5 +12,27 @@ export const on = new SlashCommandBuilder()
 	);
 
 export const action: Action<SlashCommand> = async (interaction) => {
-	log.error(`sadsadsadsadsadsa fucking shit why${await createPatGif()}`);
+	await interaction.deferReply();
+
+	try {
+		const user = interaction.options.getUser("user");
+		if (!user) {
+			await interaction.followUp("Please mention a valid user.");
+			return;
+		}
+
+		const gifBuffer = await createPatGif(user);
+
+		await interaction.followUp({
+			files: [
+				{
+					attachment: gifBuffer,
+					name: "pat.gif",
+				},
+			],
+		});
+	} catch (error) {
+		console.error("Error creating GIF:", error);
+		await interaction.followUp("An error occurred while creating the GIF.");
+	}
 };
