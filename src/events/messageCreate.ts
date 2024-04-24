@@ -13,7 +13,7 @@ export const action: Action<Message> = async (message) => {
 		const updatedContent = replacer(message.content);
 
 		if (message.content !== updatedContent) {
-      const attribution = `*Posted by <@${message.author.id}>*`;
+			const attribution = `*Posted by <@${message.author.id}>*`;
 			const newMessageContent = `${updatedContent}\n${attribution}`;
 
 			await message.channel.send(newMessageContent);
