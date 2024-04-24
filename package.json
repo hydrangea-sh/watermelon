@@ -32,6 +32,5 @@
 		"jimp": "^0.22.12",
 		"sodium": "^3.0.2",
 		"uwuifier": "^4.0.5"
-	},
-	"trustedDependencies": ["@biomejs/biome"]
+	}
 }
