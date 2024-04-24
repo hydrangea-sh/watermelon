@@ -34,7 +34,7 @@ async function startElysiaServer() {
 async function main() {
 	try {
 		await startDiscordBot();
-		startElysiaServer();
+		await startElysiaServer();
 	} catch (error) {
 		log.error("An error occurred during initialization:", error);
 	}

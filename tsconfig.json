@@ -15,6 +15,7 @@
 		"moduleDetection": "force",
 		"allowImportingTsExtensions": true,
 		"verbatimModuleSyntax": true,
+		"esModuleInterop": true,
 
 		/* Additional Options */
 		"allowSyntheticDefaultImports": true,
