@@ -6,8 +6,11 @@ Sori is a self-hosted Discord bot designed for personal and small friend servers
 
 ### Implemented
 
-- **Social Media Embed Enhancer**: Automatically converts social media links lacking embed-friendly formats into enhanced links that display the post's contents within the embed.
-- **Pat user**: Creates a gif patting a user's avatar.
+- **Social Media Embed Enhancer**: Automatically converts social media links into embed-friendly formats, displaying post contents within the embed.
+- **Pat User**: Dynamically generates a GIF of a hand patting the avatar of a mentioned user.
+- **Ping**: Measures the latency of the bot's response time.
+- **UwU**: Transforms your message into an uwu-ified version, adding cute faces, actions, stutters, and more.
+- **User Info**: Get a detailed overview of a user's information, including their name, account creation date, server join date, permissions, bot status, and roles.
 
 ### TBD
 
