@@ -76,3 +76,9 @@ Follow these instructions to set up Sori in your environment:
   ```bash
   bun run test
   ```
+
+- **Lint and format your code:**
+
+	```bash
+	bun run check
+	```
