@@ -7,6 +7,7 @@ Sori is a self-hosted Discord bot designed for personal and small friend servers
 ### Implemented
 
 - **Social Media Embed Enhancer**: Automatically converts social media links lacking embed-friendly formats into enhanced links that display the post's contents within the embed.
+- **Pat user**: Creates a gifs patting the user's avatar.
 
 ### TBD
 
