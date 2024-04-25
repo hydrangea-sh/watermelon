@@ -16,12 +16,12 @@ export const action: Action<SlashCommand> = async (interaction) => {
 
 	const uwuifier = new Uwuifier({
 		spaces: {
-			faces: 0.5,
-			actions: 0.075,
-			stutters: 0.1,
+			faces: 0.2,
+			actions: 0.025,
+			stutters: 0.05,
 		},
-		words: 1,
-		exclamations: 1,
+		words: 0.5,
+		exclamations: 0.5,
 	});
 
 	await interaction.reply(`${uwuifier.uwuifySentence(message)}`);
