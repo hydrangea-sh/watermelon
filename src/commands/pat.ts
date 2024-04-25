@@ -23,7 +23,10 @@ export const action: Action<SlashCommand> = async (interaction) => {
 
 		const gifBuffer = await createPatGif(user);
 
+		const patMessage = `${interaction.user.displayName} pats ${user}`;
+
 		await interaction.followUp({
+			content: patMessage,
 			files: [
 				{
 					attachment: gifBuffer,
