@@ -52,10 +52,8 @@ Follow these instructions to set up Sori in your environment:
 
    ```bash
    echo 'DISCORD_TOKEN="PRODUCTION-TOKEN-HERE"' > .env.production
-   echo 'PORT="3000"' >> .env.production
 
    echo 'DISCORD_TOKEN="DEVELOPMENT-TOKEN-HERE"' > .env.development
-   echo 'PORT="3000"' >> .env.development
    ```
 
 ## Usage
