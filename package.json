@@ -10,12 +10,12 @@
 		"test": "bun --coverage test .",
 		"test:watch": "bun --coverage --watch test .",
 		"format": "bunx @biomejs/biome format --write .",
-		"lint": "bunx @biomejs/biome lint --apply .",
-		"check": "bunx @biomejs/biome check --apply ."
+		"lint": "bunx @biomejs/biome lint --write .",
+		"check": "bunx @biomejs/biome check --write ."
 	},
 	"license": "GPL-3.0",
 	"devDependencies": {
-		"@biomejs/biome": "^1.7.1",
+		"@biomejs/biome": "^1.8.3",
 		"bun-types": "latest"
 	},
 	"peerDependencies": {
@@ -24,13 +24,14 @@
 	"dependencies": {
 		"@discordjs/opus": "^0.9.0",
 		"@discordjs/voice": "^0.16.1",
-		"@napi-rs/canvas": "^0.1.52",
+		"@napi-rs/canvas": "^0.1.53",
 		"@skyra/gifenc": "^1.0.1",
-		"discord.js": "^14.14.1",
-		"elysia": "^1.0.14",
+		"discord.js": "^14.15.3",
+		"elysia": "^1.1.3",
 		"gifwrap": "^0.10.1",
 		"jimp": "^0.22.12",
 		"sodium": "^3.0.2",
 		"uwuifier": "^4.0.5"
-	}
+	},
+	"trustedDependencies": ["@biomejs/biome"]
 }
