@@ -1,34 +1,32 @@
 {
-  "name": "watermelon",
-  "version": "0.0.1",
-  "type": "module",
-  "description": "a multipurpose Discord bot.",
-  "module": "src/index.ts",
-  "scripts": {
-    "start": "bun --env-file=.env.production run .",
-    "dev": "bun --watch --env-file=.env.development run .",
-    "test": "bun --coverage test .",
-    "test:watch": "bun --coverage --watch test .",
-    "format": "bunx @biomejs/biome format --write .",
-    "lint": "bunx @biomejs/biome lint --write .",
-    "check": "bunx @biomejs/biome check --write ."
-  },
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@napi-rs/canvas": "^0.1.53",
-    "@skyra/gifenc": "^1.0.1",
-    "discord.js": "^14.15.3",
-    "gifwrap": "^0.10.1",
-    "uwuifier": "^4.0.5"
-  },
-  "trustedDependencies": [
-    "@biomejs/biome"
-  ]
+	"name": "watermelon",
+	"version": "0.0.1",
+	"type": "module",
+	"description": "a multipurpose Discord bot.",
+	"module": "src/index.ts",
+	"scripts": {
+		"start": "bun --env-file=.env.production run .",
+		"dev": "bun --watch --env-file=.env.development run .",
+		"test": "bun --coverage test .",
+		"test:watch": "bun --coverage --watch test .",
+		"format": "bunx @biomejs/biome format --write .",
+		"lint": "bunx @biomejs/biome lint --write .",
+		"check": "bunx @biomejs/biome check --write ."
+	},
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"bun-types": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@napi-rs/canvas": "^0.1.53",
+		"@skyra/gifenc": "^1.0.1",
+		"discord.js": "^14.15.3",
+		"gifwrap": "^0.10.1",
+		"uwuifier": "^4.0.5"
+	},
+	"trustedDependencies": ["@biomejs/biome"]
 }
