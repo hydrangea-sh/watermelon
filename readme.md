@@ -1,6 +1,6 @@
-# Sori (소리)
+# Watermelon
 
-Sori is a self-hosted Discord bot designed for personal and small friend servers. It focuses on enhancing your Discord experience by providing quality-of-life features and fun integrations.
+Watermelon is a self-hosted Discord bot designed for personal and small friend servers. It focuses on enhancing your Discord experience by providing quality-of-life features and fun integrations.
 
 ## Features
 
@@ -19,7 +19,7 @@ Sori is a self-hosted Discord bot designed for personal and small friend servers
 
 ## Prerequisites
 
-To get started with Sori, you should have a basic understanding of Git, command line interfaces (CLI), creating Discord tokens, and TypeScript. If you're new to any of these concepts, consider checking out the following resources:
+To get started with Watermelon, you should have a basic understanding of Git, command line interfaces (CLI), creating Discord tokens, and TypeScript. If you're new to any of these concepts, consider checking out the following resources:
 
 - [Git and GitHub for Beginners](https://guides.github.com/activities/hello-world/)
 - [What is Command Line Interface (CLI)?](https://www.w3schools.com/whatis/whatis_cli.asp)
@@ -28,18 +28,18 @@ To get started with Sori, you should have a basic understanding of Git, command 
 
 ## Setup
 
-Follow these instructions to set up Sori in your environment:
+Follow these instructions to set up Watermelon in your environment:
 
 1. **Clone the repository:**
 
     ```bash
-   git clone https://github.com/hydrangea-sh/sori
+   git clone https://github.com/hydrangea-sh/watermelon
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd sori
+   cd watermelon
    ```
 
 3. **Install dependencies with Bun:**
