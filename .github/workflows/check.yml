@@ -1,4 +1,4 @@
-name: Perform Code Quality Checks
+name: Perform Formatter and Linter Check
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   code_quality_analysis:
-    name: Perform Code Quality Checks
+    name: Perform Formatter and Linter Check
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,5 @@ jobs:
         with:
           version: "latest"
 
-      - name: Execute Code Quality Checks
+      - name: Execute Formatter and Linter Check
         run: biome ci .
