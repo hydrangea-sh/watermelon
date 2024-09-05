@@ -12,12 +12,13 @@ export const on = new SlashCommandBuilder()
 	);
 
 export const action: Action<SlashCommand> = async (interaction) => {
-	await interaction.deferReply();
-
 	try {
 		const user = interaction.options.getUser("user");
 		if (!user) {
-			await interaction.followUp("Please mention a valid user.");
+			await interaction.reply({
+				content: "Please mention a valid user.",
+				ephemeral: true,
+			});
 			return;
 		}
 
@@ -25,7 +26,7 @@ export const action: Action<SlashCommand> = async (interaction) => {
 
 		const patMessage = `${interaction.user.displayName} pats ${user}`;
 
-		await interaction.followUp({
+		await interaction.reply({
 			content: patMessage,
 			files: [
 				{
@@ -36,6 +37,9 @@ export const action: Action<SlashCommand> = async (interaction) => {
 		});
 	} catch (error) {
 		console.error("Error creating GIF:", error);
-		await interaction.followUp("An error occurred while creating the GIF.");
+		await interaction.reply({
+			content: "An error occurred while creating the GIF.",
+			ephemeral: true,
+		});
 	}
 };

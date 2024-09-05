@@ -1,5 +1,11 @@
 import { SlashCommandBuilder } from "discord.js";
-import { containsValidUrl, replacer } from "../services/embedService";
+import {
+	containsValidUrl,
+	getSupportedPlatforms,
+	isSupportedUrl,
+	replacer,
+} from "../services/embedService";
+import { log } from "../utils/logger";
 
 export const on = new SlashCommandBuilder()
 	.setName("embed")
@@ -9,21 +15,32 @@ export const on = new SlashCommandBuilder()
 	);
 
 export const action: Action<SlashCommand> = async (interaction) => {
-	const reply = await interaction.deferReply({ fetchReply: true });
-
 	try {
 		const url = interaction.options.getString("url", true);
 
 		if (!containsValidUrl(url)) {
-			await interaction.followUp("Please have a valid url.");
+			await interaction.reply({
+				content: "Please provide a valid url (e.g., https://instagram.com).",
+				ephemeral: true,
+			});
+			return;
+		}
+		if (!isSupportedUrl(url)) {
+			await interaction.reply({
+				content: `Please provide a supported url. \n Supported urls: ${getSupportedPlatforms()}`,
+				ephemeral: true,
+			});
 			return;
 		}
 
-		await interaction.followUp({
+		await interaction.reply({
 			content: `${replacer(url)}`,
 		});
 	} catch (error) {
-		console.error("Error embedding URL:", error);
-		await interaction.followUp("An error occurred while created the url.");
+		log.error("Error embedding URL:", error);
+		await interaction.reply({
+			content: "An error occurred while created the url.",
+			ephemeral: true,
+		});
 	}
 };
