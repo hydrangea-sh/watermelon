@@ -1,4 +1,4 @@
-ARG BUN_VERSION=1.1.21
+ARG BUN_VERSION=1.1.26
 FROM oven/bun:${BUN_VERSION}-slim
 WORKDIR /app
 ENV NODE_ENV="production"
